@@ -292,3 +292,14 @@ footer {
 text-align: center;
 }
 
+.social-media a, li{
+    text-decoration: none;
+    color:#FF66A2;
+    list-style: none;
+    display: flex;
+    margin-top: 5px;
+}
+
+.social-media img {
+    padding: 5px;
+}
