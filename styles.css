@@ -1,0 +1,231 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #111111;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#FF4081;
+    color: #fff;
+    padding: 20px 20px;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+/* Navigation Bar Hover Animation */
+nav a:hover {
+    color: #ff6600; /* Change the color to your desired hover color */
+}
+
+/* Card styles */
+.card {
+    background-color:  #222222 ;
+    border: 1px solid#333333;
+    border-radius: 20px; /* Set the border radius to 20px */
+    padding: 20px;
+    margin: 20px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.card-item {
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Set the border radius to 20px */
+    padding: 10px;
+    margin: 20px; /* Set the gap between portfolio items to 20px */
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+#portfolio {
+    text-align: left;
+}
+
+#portfolio h2 {
+    color: #F5F5F5;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.portfolio-images {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.portfolio-item {
+    color:#F5F5F5;
+    flex: 0 0 calc(25% - 20px);
+    margin: 0 10px 0px 0; /* Adjusted margin here */
+    text-align: center;
+    padding: 10px;
+    background-color:  #111111 ;
+    border: 1px solid #333333;
+    border-radius: 20px;
+}
+
+.portfolio-item p {
+    color:#F5F5F5;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+}
+
+/* Ensure 4 items per row, with no gap between them */
+.portfolio-item:nth-child(4n) {
+    margin-right: 0;
+}
+
+#hero {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.slideshow {
+    display: flex;
+    width: 300%;
+}
+
+.slide {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#hero h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4081;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-button:hover {
+    background-color: #FF66A2;
+}
