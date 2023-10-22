@@ -1,8 +1,15 @@
-/* Reset some default styles */
+
 body, h1, h2, p, ul {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace;
     color: #f9f9f9;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
 }
 
 body {
@@ -10,13 +17,17 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Header styles */
+
 header {
+    text-align: center;
+    border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#FF4081;
+    background-color:  rgba(17, 17, 17, 0.2) ;
+    backdrop-filter: blur(5px);
     color: #fff;
+    border: 1px solid#FF66A2;
     padding: 20px 20px;
 }
 
@@ -24,26 +35,23 @@ header {
     max-width: 100px;
 }
 
+.header-image {
+    text-align: center;
+    
+    margin-top: 20px;
+    padding: 20px;
+}
 
+.header-image img {
+    max-width: 100%;
+    height: auto;
+}
 
 nav {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
     display: flex;
     align-items: center;
-}
-
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.menu-icon span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
 }
 
 nav ul {
@@ -60,16 +68,16 @@ nav a {
     color: #F5F5F5;
 }
 
-/* Navigation Bar Hover Animation */
 nav a:hover {
-    color: #ff6600; /* Change the color to your desired hover color */
+    color:#FF66A2;
 }
 
-/* Card styles */
+
 .card {
-    background-color:  #222222 ;
+    background-color:  rgba(17, 17, 17, 0.2) ;
+    backdrop-filter: blur(5px);
     border: 1px solid#333333;
-    border-radius: 20px; /* Set the border radius to 20px */
+    border-radius: 20px;
     padding: 20px;
     margin: 20px;
 }
@@ -87,17 +95,26 @@ nav a:hover {
 
 .card-item {
     border: 1px solid #ddd;
-    border-radius: 20px; /* Set the border radius to 20px */
+    border-radius: 20px; 
     padding: 10px;
-    margin: 20px; /* Set the gap between portfolio items to 20px */
+    margin: 20px; 
     text-align: center;
     background-color: #f9f9f9;
 }
+.card-content p {
+    text-align: justify ;
+    color: #ddd;
+}
 
-/* Mobile-friendly styles */
+.card-item img{
+    max-width: 100px;
+    max-height: 100px;
+}
+
 @media (max-width: 768px) {
-    .menu-icon {
-        display: block;
+
+    body {
+        width: 100%;
     }
 
     nav ul {
@@ -123,8 +140,9 @@ nav a:hover {
     text-align: left;
 }
 
-#portfolio h2 {
-    color: #F5F5F5;
+#portfolio h2{
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -136,29 +154,39 @@ nav a:hover {
     justify-content:space-evenly;
 }
 
+.portfolio-images a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .portfolio-item {
+    font-family: 'Courier New', Courier, monospace;
     color:#F5F5F5;
     flex: 0 0 calc(25% - 20px);
-    margin: 0 10px 0px 0; /* Adjusted margin here */
+    margin: 0 10px 0px 0;
     text-align: center;
     padding: 10px;
-    background-color:  #111111 ;
+    background-color:  rgba(17, 17, 17, 0.2) ;
+    backdrop-filter: blur(20px);
     border: 1px solid #333333;
     border-radius: 20px;
 }
 
 .portfolio-item p {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
     color:#F5F5F5;
 }
 
 .portfolio-item img {
-    max-width: 100%;
+    padding:20px;
+    border-radius: 40px;
+    max-width: 150px;
 }
 
-/* Ensure 4 items per row, with no gap between them */
 .portfolio-item:nth-child(4n) {
     margin-right: 0;
 }
+
 
 #hero {
     position: relative;
@@ -170,17 +198,20 @@ nav a:hover {
 }
 
 .slideshow {
-    display: flex;
-    width: 300%;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .slide {
-    flex: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    width: 100%;
-    height: 100%;
     transition: opacity 1s ease;
 }
 
@@ -189,14 +220,19 @@ nav a:hover {
 }
 
 .hero-content {
+    
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 20px; 
+    transform: translateY(-50%);
     z-index: 2;
-    text-align: center;
-    width: 100%;
+    text-align: left; 
+    width: auto;
     padding: 20px;
+}
+.hero-content p {
+
+    color: #f9f9f9;
 }
 
 #hero h1 {
@@ -216,16 +252,43 @@ nav a:hover {
 }
 
 .contact-button {
+    font-family: 'Courier New', Courier, monospace;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #FF4081;
+    background-color: rgba(255, 64, 129, 0.8);
     color: #fff;
     border: none;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
+    backdrop-filter: blur(20px);
 }
 
 .contact-button:hover {
     background-color: #FF66A2;
 }
+
+
+.parallax-content {
+    height: 100vh;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url('cb.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+footer {
+text-align: center;
+}
+
