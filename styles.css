@@ -298,6 +298,8 @@ text-align: center;
     list-style: none;
     display: flex;
     margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 .social-media img {
