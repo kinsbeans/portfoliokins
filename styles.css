@@ -381,6 +381,26 @@ text-align: center;
     font-size: 0; 
 }
 
+@keyframes borderHighlightAndGlow {
+    0% {
+        border-color: #333333; /* Original border color */
+        box-shadow: 0 0 0 rgba(255, 102, 162, 0); /* No glow (transparent) */
+    }
+    50% {
+        border-color: #FF66A2; /* Color to highlight to */
+        box-shadow: 0 0 10px rgba(255, 102, 162, 0.5); /* Add glow */
+    }
+    100% {
+        border-color: #333333; /* Back to the original color */
+        box-shadow: 0 0 0 rgba(255, 102, 162, 0); /* No glow (transparent) */
+    }
+}
+
+
+.highlight {
+    animation: borderHighlightAndGlow 2s ease-in-out; 
+}
+
 
 
 
