@@ -67,16 +67,20 @@ nav ul {
 
 nav li {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
     margin-right: 20px;
 }
 
 nav a {
+    color: #f9f9f9;
     text-decoration: none;
-    color: #F5F5F5;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.2s; /* Added color transition */
 }
 
 nav a:hover {
-    color:#FF66A2;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: #FF66A2; /* Change the color on hover */
 }
 
 
@@ -175,10 +179,23 @@ nav a:hover {
     backdrop-filter: blur(20px);
     border: 1px solid #333333;
     border-radius: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.portfolio-item:hover{
+    border: 1px solid #FF66A2;
+    transform: translateY(-5px); /* Move the item up slightly on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), /* Regular shadow */
+                0 0 20px #FF66A2;
+
 }
 
 .portfolio-item p {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
     color:#F5F5F5;
 }
 
@@ -186,6 +203,10 @@ nav a:hover {
     padding:20px;
     border-radius: 40px;
     max-width: 150px;
+}
+
+.portfolio-item a:hover {
+    color:#FF66A2;
 }
 
 .portfolio-item:nth-child(4n) {
@@ -257,7 +278,7 @@ nav a:hover {
 }
 
 .contact-button {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: inline-block;
     padding: 10px 20px;
     background-color: rgba(255, 64, 129, 0.8);
@@ -267,11 +288,16 @@ nav a:hover {
     text-decoration: none;
     font-weight: bold;
     backdrop-filter: blur(20px);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s; /* Add transitions for smooth effects */
 }
 
 .contact-button:hover {
-    background-color: #FF66A2;
+    transform: translateY(-5px); /* Move the button up slightly on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a regular shadow on hover */
+    background-color: #FF66A2; /* Change the background color to create a glow effect on hover */
 }
+
+
 
 
 .parallax-content {
@@ -318,8 +344,15 @@ text-align: center;
 }
 
 .social-media a {
-    color: #FF66A2;
-    text-decoration: none; 
+    color:#f9f9f9;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.social-media a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    color:#FF66A2;
 }
 
 .social-media img {
@@ -343,4 +376,7 @@ text-align: center;
     white-space: normal; 
     font-size: 0; 
 }
+
+
+
 
